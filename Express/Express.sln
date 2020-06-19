@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Express", "Express\Express.csproj", "{F85BA768-F7B1-4AFA-AD5C-15F3890CA9FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IflySdk", "..\IflySdk-master\src\IflySdk\IflySdk.csproj", "{89822655-6283-4269-BCDC-58975CCC6E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F85BA768-F7B1-4AFA-AD5C-15F3890CA9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85BA768-F7B1-4AFA-AD5C-15F3890CA9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85BA768-F7B1-4AFA-AD5C-15F3890CA9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85BA768-F7B1-4AFA-AD5C-15F3890CA9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89822655-6283-4269-BCDC-58975CCC6E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89822655-6283-4269-BCDC-58975CCC6E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89822655-6283-4269-BCDC-58975CCC6E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89822655-6283-4269-BCDC-58975CCC6E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60A6B930-EA2B-4684-9D5C-DE7D8227B860}
+	EndGlobalSection
+EndGlobal

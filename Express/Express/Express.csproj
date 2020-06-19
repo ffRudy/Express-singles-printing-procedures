@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F85BA768-F7B1-4AFA-AD5C-15F3890CA9FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Express</RootNamespace>
+    <AssemblyName>Express</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AipSdk, Version=3.6.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Baidu.AI.3.6.14\lib\net45\AipSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Corder.cs" />
+    <Compile Include="API\Appointment.cs" />
+    <Compile Include="API\OrderDistinguish.cs" />
+    <Compile Include="API\TrackOrder.cs" />
+    <Compile Include="AppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForm.designer.cs">
+      <DependentUpon>AppForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommClass.cs" />
+    <Compile Include="Common\GlobalProperty.cs" />
+    <Compile Include="Common\MD5Encrypt.cs" />
+    <Compile Include="Common\ReadFile.cs" />
+    <Compile Include="CusControl\CTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CusControl\CTextBox.Designer.cs">
+      <DependentUpon>CTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataOperate.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BaseSet\FormBillType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseSet\FormBillType.Designer.cs">
+      <DependentUpon>FormBillType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseSet\FormBillTypeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseSet\FormBillTypeInput.Designer.cs">
+      <DependentUpon>FormBillTypeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseSet\FormSetProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseSet\FormSetProperty.Designer.cs">
+      <DependentUpon>FormSetProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseSet\FormSetTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseSet\FormSetTemplate.Designer.cs">
+      <DependentUpon>FormSetTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormBillPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormBillPrint.Designer.cs">
+      <DependentUpon>FormBillPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormBrowseBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormBrowseBill.Designer.cs">
+      <DependentUpon>FormBrowseBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormCreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormCreateOrder.designer.cs">
+      <DependentUpon>FormCreateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormExpressBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormExpressBill.Designer.cs">
+      <DependentUpon>FormExpressBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormExpressOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormExpressOrder.Designer.cs">
+      <DependentUpon>FormExpressOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderDetail.Designer.cs">
+      <DependentUpon>FormOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderDisplay.Designer.cs">
+      <DependentUpon>FormOrderDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderDistinguish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderDistinguish.Designer.cs">
+      <DependentUpon>FormOrderDistinguish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Express\FormOrderSearch.Designer.cs">
+      <DependentUpon>FormOrderSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NewFolder1\RootObject.cs" />
+    <Compile Include="UI\NewFolder1\Shipper.cs" />
+    <Compile Include="UI\NewFolder1\Trace.cs" />
+    <EmbeddedResource Include="AppForm.resx">
+      <DependentUpon>AppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CusControl\CTextBox.resx">
+      <DependentUpon>CTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\BaseSet\FormBillType.resx">
+      <DependentUpon>FormBillType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseSet\FormBillTypeInput.resx">
+      <DependentUpon>FormBillTypeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseSet\FormSetTemplate.resx">
+      <DependentUpon>FormSetTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormBillPrint.resx">
+      <DependentUpon>FormBillPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormBrowseBill.resx">
+      <DependentUpon>FormBrowseBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormCreateOrder.resx">
+      <DependentUpon>FormCreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormExpressBill.resx">
+      <DependentUpon>FormExpressBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormExpressOrder.resx">
+      <DependentUpon>FormExpressOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormOrderDetail.resx">
+      <DependentUpon>FormOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormOrderDisplay.resx">
+      <DependentUpon>FormOrderDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormOrderDistinguish.resx">
+      <DependentUpon>FormOrderDistinguish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Express\FormOrderSearch.resx">
+      <DependentUpon>FormOrderSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IflySdk-master\src\IflySdk\IflySdk.csproj">
+      <Project>{89822655-6283-4269-bcdc-58975ccc6e8a}</Project>
+      <Name>IflySdk</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\BaseSet\图标_修改密码.gif" />
+    <Content Include="Images\BaseSet\图标_基础设置.gif" />
+    <Content Include="Images\BaseSet\图标_操作员维护.gif" />
+    <Content Include="Images\BaseSet\图标_操作员设置.gif" />
+    <Content Include="Images\BaseSet\图标_模板设置.gif" />
+    <Content Include="Images\Express\图标_轨迹追踪.gif" />
+    <Content Include="Images\Express\图标_预约取件.gif" />
+    <Content Include="Images\Express\图标_单号查询.gif" />
+    <Content Include="Images\Express\图标_电子面单.gif" />
+    <Content Include="UI\Express\HTMLPage1.html" />
+    <None Include="Resources\Image2.jpg" />
+    <None Include="Resources\Image1.jpg" />
+    <None Include="Images\Image\Image1.jpg" />
+    <None Include="Images\Image\Image2.jpg" />
+    <Content Include="Images\Other\back.png" />
+    <Content Include="Images\Other\exit.png" />
+    <Content Include="Images\Other\login.png" />
+    <Content Include="Images\Other\loginbg.jpg" />
+    <Content Include="Images\Other\reset.png" />
+    <Content Include="Images\Other\图标_快递单.gif" />
+    <Content Include="Images\Other\图标_快递单.ico" />
+    <Content Include="Images\Other\图标_快递单1.gif" />
+    <Content Include="Images\Other\图标_快递单1.ico" />
+    <Content Include="Images\Other\图标_退出人.gif" />
+    <Content Include="Images\Other\图标_退出门.gif" />
+    <Content Include="Images\ToolStrip\add.ico" />
+    <Content Include="Images\ToolStrip\btnfind.ico" />
+    <Content Include="Images\ToolStrip\cancel.ico" />
+    <Content Include="Images\ToolStrip\change.ico" />
+    <Content Include="Images\ToolStrip\Close.ico" />
+    <Content Include="Images\ToolStrip\delete.ico" />
+    <Content Include="Images\ToolStrip\exit.ico" />
+    <Content Include="Images\ToolStrip\find.ico" />
+    <Content Include="Images\ToolStrip\print.ico" />
+    <Content Include="Images\ToolStrip\Query.ico" />
+    <Content Include="Images\ToolStrip\save.ico" />
+    <Content Include="Images\ToolStrip\Setting.ico" />
+    <Content Include="pic\追封快递单.JPG" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
