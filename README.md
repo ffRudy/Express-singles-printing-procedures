@@ -1,0 +1,7 @@
+因为前期我对github团队开发的不太熟悉，所以导致小组没有通过github进行协作开发，而是开发好了集成了由我一次提交的。下面是团队分工：
+白小宇同学：Common中的CommClass，GlobalProperty，主界面AppForm
+郑文鸿：DAL中的DataOperate（数据库操作），登录界面FormLogin
+付浩：UI中FormExpressOrder界面，FormOrderDisplay界面（电子面单），iflysdk，API中Corder，AddressNLP
+林雯静：UI中FormCreateOrder界面（预约取件），UI中Express里的界面快递单打印界面FormBillPrint，API中Appointment
+郑建宙：UI中OrderDistinguish界面（单号查询，UI中Express快递单查询界面FormBrowseBill,FormExpressBill，API中OrderDistingguish
+方胜强：UI中FormOrderSearch界面,FormOrderDetail界面（轨迹查询），API中TrackOrder
